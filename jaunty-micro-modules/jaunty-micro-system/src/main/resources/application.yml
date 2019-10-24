@@ -1,0 +1,16 @@
+#应用的名称
+spring:
+  application:
+    name: jaunty-micro-system
+#应用的端口
+server:
+  port: 8002
+eureka:
+  instance:
+    #设置主机名
+    hostname: localhost
+  client:
+    service-url:
+      #注册地址：所有其他服务注册到这个地址
+      defaultZone: http://${eureka.instance.hostname}:8001/eureka/
+
