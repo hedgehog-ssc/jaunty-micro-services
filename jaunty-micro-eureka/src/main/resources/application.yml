@@ -1,13 +1,16 @@
+#应用的端口
 server:
   port: 8001
 
 eureka:
   instance:
+    #设置主机名
     hostname: localhost
   client:
-    #eureka自身不需要注册
+    #eureka自身不需要向自身注册，因此设置为false
     register-with-eureka: false
+    #是否检索服务，服务注册中心只需负责注册和发现服务，无需检索服务，因此设置为false
     fetch-registry: false
     service-url:
-      #注册地址：所有服务注册到这个地址
+      #注册地址：所有其他服务注册到这个地址
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
