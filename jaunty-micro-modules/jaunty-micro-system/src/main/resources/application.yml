@@ -1,7 +1,6 @@
-#应用的名称
 spring:
   application:
-    name: jaunty-micro-system
+    name: jaunty-micro-system #应用的名称
   profiles:
     active: dev #当前激活环境
 #mybatis配置
