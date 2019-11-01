@@ -26,13 +26,13 @@ mybatis:
   type-aliases-package: com.jaunty.domain.entity
 
 # 日志配置
-#logging.level.ROOT: INFO
-#logging.level.org.springframework.web: INFO
-#logging.level.io.swagger.models.parameters.AbstractSerializableParameter: error
-#logging.path: /Users/admin/logs
-#logging.file: /Users/admin/logs/${spring.application.name}.log
-#logging.pattern.console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
-#logging.pattern.file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+logging.level.ROOT: INFO
+logging.level.org.springframework.web: INFO
+logging.level.io.swagger.models.parameters.AbstractSerializableParameter: error
+logging.path: /Users/admin/logs
+logging.file: /Users/admin/logs/${spring.application.name}.log
+logging.pattern.console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+logging.pattern.file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
 # SQL日志
-#logging.level.com.jaunty.dao: debug
+logging.level.com.jaunty.dao: debug
 

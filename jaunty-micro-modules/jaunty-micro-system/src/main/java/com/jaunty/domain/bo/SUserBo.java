@@ -1,8 +1,8 @@
 package com.jaunty.domain.bo;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.Data;
 
-@Slf4j
+@Data
 public class SUserBo {
 
 }
