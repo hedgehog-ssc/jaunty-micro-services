@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <properties resource="./mybatis-generator/config.properties"/>
+    <properties resource="./generatorConfig.properties"/>
     <!--<context id="DB2Tables" targetRuntime="MyBatis3">-->
     <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
         <!-- 数据库关键字冲突,自动处理 -->
@@ -96,7 +96,7 @@
                 注意，table里面很多参数都是对javaModelGenerator，context等元素的默认属性的一个复写；
         -->
 
-        <table tableName="s_user" enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="s_log" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="false"/>

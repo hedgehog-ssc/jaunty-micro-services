@@ -1,17 +1,16 @@
+#应用的端口
+server:
+  port: 8002
 #应用的名称
 spring:
   application:
     name: jaunty-micro-system
-  #--------------------------数据库连接信息--------------------------
+  #数据库连接信息
   datasource:
     username: root
     password: root
     url: jdbc:mysql://127.0.0.1:3306/jaunty?autoReconnect=true&characterEncoding=UTF-8&useUnicode=true&serverTimezone=Asia/Shanghai
-    hikari:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-#应用的端口
-server:
-  port: 8002
+    driver-class-name: com.mysql.cj.jdbc.Driver
 #eureka配置
 eureka:
   instance:
@@ -24,12 +23,16 @@ eureka:
 #mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
-  type-aliases-package: com.domain.entity
+  type-aliases-package: com.jaunty.domain.entity
 
-#showSql
-logging:
-  level:
-    com:
-      jaunty:
-        dao : debug
+# 日志配置
+#logging.level.ROOT: INFO
+#logging.level.org.springframework.web: INFO
+#logging.level.io.swagger.models.parameters.AbstractSerializableParameter: error
+#logging.path: /Users/admin/logs
+#logging.file: /Users/admin/logs/${spring.application.name}.log
+#logging.pattern.console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+#logging.pattern.file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+# SQL日志
+#logging.level.com.jaunty.dao: debug
 
