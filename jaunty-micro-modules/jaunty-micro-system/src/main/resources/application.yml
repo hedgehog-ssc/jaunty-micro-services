@@ -2,9 +2,17 @@
 spring:
   application:
     name: jaunty-micro-system
+  #--------------------------数据库连接信息--------------------------
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/jaunty?autoReconnect=true&characterEncoding=UTF-8&useUnicode=true&serverTimezone=Asia/Shanghai
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
 #应用的端口
 server:
   port: 8002
+#eureka配置
 eureka:
   instance:
     #设置主机名
@@ -13,4 +21,15 @@ eureka:
     service-url:
       #注册地址：所有其他服务注册到这个地址
       defaultZone: http://${eureka.instance.hostname}:8001/eureka/
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.domain.entity
+
+#showSql
+logging:
+  level:
+    com:
+      jaunty:
+        dao : debug
 
