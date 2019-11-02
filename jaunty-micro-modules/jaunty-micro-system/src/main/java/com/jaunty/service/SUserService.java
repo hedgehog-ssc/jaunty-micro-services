@@ -11,11 +11,21 @@ public class SUserService {
     private SUserMapper userMapper;
 
     /**
-     * 根据ID获取用户
+     * 根据ID获取用户；
      * @param id
      * @return
      */
     public SUser getById(Long id){
         return userMapper.selectByPrimaryKey(id);
+    }
+
+    /**
+     * 根据用户账户获取用户实体--用户登录shiro校验；
+     * @param username
+     * @return
+     */
+    public SUser getByUsername(String username) {
+        SUser sUser = new SUser();
+        return sUser;
     }
 }
