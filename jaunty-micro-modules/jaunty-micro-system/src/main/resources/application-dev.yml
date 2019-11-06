@@ -1,7 +1,5 @@
-#应用的端口
 server:
-  port: 8002
-#应用的名称
+  port: 8002 #应用的端口
 spring:
   #数据库连接信息
   datasource:
@@ -12,12 +10,10 @@ spring:
 #eureka配置
 eureka:
   instance:
-    #设置主机名
-    hostname: localhost
+    hostname: localhost #设置主机名
   client:
     service-url:
-      #注册地址：所有其他服务注册到这个地址
-      defaultZone: http://${eureka.instance.hostname}:8001/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8001/eureka/ #注册地址：所有其他服务注册到这个地址
 
 # 日志配置
 logging.level.ROOT: INFO
