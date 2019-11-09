@@ -1,5 +1,10 @@
+server:
+  port: 8769
 spring:
   application:
     name: jaunty-micro-admin-server
-server:
-  port: 8769
+  security:
+    user:
+      name: admin #admin监控账号
+      password: 123456 #admin监控账号
+

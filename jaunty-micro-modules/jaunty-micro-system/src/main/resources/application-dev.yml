@@ -11,16 +11,16 @@ spring:
     admin:
       client:
         url: http://localhost:8769 #admin-server注册地址
-
+        username: admin #admin登录账号
+        password: 123456 #admin登录密码
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: '*' #暴露所有的端点
   endpoint:
     health:
-      show-details: ALWAYS
-
+      show-details: ALWAYS #health endpoint是否必须显示全部细节
 #eureka配置
 eureka:
   instance:
