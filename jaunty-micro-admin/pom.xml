@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jaunty</groupId>
-    <artifactId>jaunty-micro-common</artifactId>
+    <artifactId>jaunty-micro-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jaunty-micro-common</name>
+    <name>jaunty-micro-admin</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -19,9 +19,22 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- admin server -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>

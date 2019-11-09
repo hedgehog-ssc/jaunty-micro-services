@@ -7,6 +7,20 @@ spring:
     password: root
     url: jdbc:mysql://127.0.0.1:3306/jaunty?autoReconnect=true&characterEncoding=UTF-8&useUnicode=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
+  boot:
+    admin:
+      client:
+        url: http://localhost:8769 #admin-server注册地址
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
 #eureka配置
 eureka:
   instance:

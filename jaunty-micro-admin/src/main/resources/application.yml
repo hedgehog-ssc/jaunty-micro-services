@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: jaunty-micro-admin-server
+server:
+  port: 8769
