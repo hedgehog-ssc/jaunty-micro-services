@@ -85,14 +85,20 @@ public class Realm extends AuthorizingRealm {
         //1、从PrincipalCollection中获取登录用户的信息；
         Object principal = principalCollection.getPrimaryPrincipal();
 
-        //2、利用登录的用户信息确定角色和权限（一般需要查询数据库）；
+        //2、创建 SimpleAuthorizionInfo；
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+
+        //3、利用登录的用户信息确定角色和权限（一般需要查询数据库），并设置到 SimpleAuthorizionInfo 中，然后返回；
         Set<String> roles = new HashSet<>();
+        Set<String> menus = new HashSet<>();
         if("admin".equals(principal)){
             roles.add("admin");
+            info.addStringPermission("*:*:*");
+        }else{
+            info.addRoles(roles);
+            info.addStringPermissions(menus);
         }
 
-        //3、创建 SimpleAuthorizionInfo，设置其roles属性，并返回；
-        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo(roles);
         return info;
     }
 }

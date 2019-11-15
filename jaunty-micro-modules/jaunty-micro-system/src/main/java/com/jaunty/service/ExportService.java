@@ -10,8 +10,14 @@ import java.io.OutputStream;
 import java.net.URLEncoder;
 
 @Service
-public class PdfExportService {
+public class ExportService {
 
+    /**
+     * 导出PDF文件
+     * @param request
+     * @param response
+     * @throws Exception
+     */
     public void exportPdf(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         //纸张规格：A4纸
@@ -89,5 +95,14 @@ public class PdfExportService {
         doc.add(table2);
 
         doc.close();
+    }
+
+    /**
+     * 导出Excel文件
+     * @param request
+     * @param response
+     */
+    public void exportExcel(HttpServletRequest request, HttpServletResponse response) {
+
     }
 }
